@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,252 +7,53 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
-body { font-family:'Inter',sans-serif; background:#ffffff; color:#111; line-height:1.6; transition: all 0.3s; }
-/* NAVBAR */
-nav { border-bottom:1px solid #eee; background:white; position: sticky; top:0; z-index:10; }
+body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#111; line-height:1.6; }
+
+/**************** NAVBAR ****************/
+nav { border-bottom:1px solid #e3e6eb; background:#ffffffcc; backdrop-filter:blur(10px); position: sticky; top:0; z-index:10; }
 .nav-container { max-width:1100px; margin:auto; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; }
-.logo { font-weight:600; font-size:20px; }
-.lang-toggle { display:flex; gap:8px; background:#f5f5f5; padding:8px 12px; border-radius:20px; border:1px solid #eee; }
+.logo { display:flex; align-items:center; gap:10px; font-weight:600; font-size:20px; color:#111; }
+.logo img{ width:34px; height:34px; border-radius:50%; }
+.lang-toggle { display:flex; gap:8px; background:#f1f2f5; padding:8px 12px; border-radius:20px; border:1px solid #e0e3ea; }
 .lang-btn { padding:6px 12px; border-radius:16px; text-decoration:none; font-size:14px; font-weight:500; transition:0.2s; cursor:pointer; }
 .lang-btn.active { background:#1a73e8; color:white; }
 .lang-btn:not(.active) { color:#666; }
 .lang-btn:hover:not(.active) { background:#e8f0fe; }
-/* HERO */
-.hero { border-bottom:1px solid #eee; }
-.hero img { width:100%; object-fit:cover; }
-.container { max-width:1000px; margin:auto; padding:60px 20px; }
-/* TITLE */
+
+/**************** HERO ****************/
+.hero { border-bottom:1px solid #e3e6eb; background:#f8fafc; }
+.hero img { width:100%; max-height:360px; object-fit:cover; display:block; }
+.container { max-width:1000px; margin:auto; padding:50px 20px 70px; }
+
+/**************** TITLE ****************/
 h1 { font-size:42px; margin-bottom:10px; }
-.subtitle { font-size:18px; color:#666; margin-bottom:50px; }
-/* TLDR */
-.tldr { background:#e3f2fd; border:1px solid #bbdefb; border-radius:12px; padding:24px; margin-bottom:50px; opacity:0; animation: fadeIn 0.5s forwards; }
-@keyframes fadeIn { to { opacity:1; } }
-.tldr-title { font-size:20px; font-weight:600; margin-bottom:12px; color:#1976d2; }
-.tldr-text { font-size:15px; color:#1565c0; }
-/* BUTTON LINKS */
-.links { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:70px; }
-.link-card { display:flex; align-items:center; gap:16px; padding:26px; border-radius:14px; border:1px solid #e8e8e8; text-decoration:none; color:black; background:white; transition:0.2s; }
-.link-card:hover { transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.08); }
-.icon { width:32px; height:32px; flex-shrink:0; }
-.link-title { font-size:20px; font-weight:600; }
+.subtitle { font-size:18px; color:#666; margin-bottom:40px; }
+
+/**************** TLDR ****************/
+.tldr { background:#f0f4ff; border:1px solid #d6e2ff; border-radius:14px; padding:22px 24px; margin-bottom:40px; }
+.tldr-title { font-size:18px; font-weight:600; margin-bottom:10px; color:#2257c4; }
+.tldr-text { font-size:15px; color:#2952a3; }
+
+/**************** LINK CARDS ****************/
+.links { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:60px; }
+.link-card { display:flex; align-items:center; gap:16px; padding:22px 24px; border-radius:14px; border:1px solid #e3e6eb; text-decoration:none; color:#111; background:white; transition:0.2s; box-shadow:0 4px 10px rgba(15,23,42,0.03); }
+.link-card:hover { transform:translateY(-3px); box-shadow:0 10px 24px rgba(15,23,42,0.08); }
+.icon { width:34px; height:34px; flex-shrink:0; }
+.link-title { font-size:18px; font-weight:600; }
 .link-desc { font-size:14px; color:#666; }
-/* SECTION TITLES */
-.section-title { font-size:24px; margin-bottom:20px; }
-/* TOOLS */
-.tools { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-bottom:60px; }
-.tool { background:white; border:1px solid #e8e8e8; padding:20px; border-radius:10px; transition:0.2s; }
-.tool:hover { transform:translateY(-4px); box-shadow:0 10px 25px rgba(0,0,0,0.06); }
-.tool-title { font-size:16px; font-weight:600; margin-bottom:6px; }
+
+/**************** SECTION TITLES ****************/
+.section-title { font-size:22px; margin-bottom:16px; font-weight:600; color:#222; }
+
+/**************** TOOLS ****************/
+.tools { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-bottom:50px; }
+.tool { background:white; border:1px solid #e3e6eb; padding:18px 20px; border-radius:12px; transition:0.2s; box-shadow:0 4px 10px rgba(15,23,42,0.02); }
+.tool:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(15,23,42,0.06); }
+.tool-title { font-size:15px; font-weight:600; margin-bottom:6px; }
 .tool-desc { font-size:14px; color:#666; margin-bottom:10px; }
-.tool-links { display:flex; flex-wrap:wrap; gap:10px; font-size:13px; }
+.tool-links { display:flex; flex-direction:column; gap:6px; font-size:13px; }
 .tool-links a { text-decoration:none; color:#1a73e8; font-weight:500; }
 .tool-links a:hover { text-decoration:underline; }
-/* DISCLAIMER */
-.disclaimer { background:#f8f9fa; border:1px solid #e1e5e9; border-radius:12px; padding:24px; margin-bottom:60px; font-size:13px; line-height:1.5; }
-.disclaimer-title { font-weight:600; color:#d32f2f; margin-bottom:12px; font-size:14px; }
-.disclaimer-text { color:#555; }
-.disclaimer-text strong { color:#111; }
-/* ABOUT */
-.about { margin-bottom:60px; }
-.about p { font-size:15px; color:#555; line-height:1.7; }
-/* FOOTER */
-footer { margin-top:70px; padding-top:30px; border-top:1px solid #eee; color:#777; font-size:14px; text-align:center; }
-@media(max-width:640px){ .links { grid-template-columns:1fr; } }
-.hidden { display: none !important; }
-</style>
-</head>
-<body>
-<nav>
-  <div class="nav-container">
-    <div class="logo">OnChainRover</div>
-    <div class="lang-toggle">
-      <a href="#" class="lang-btn active" data-lang="en" title="English">🇺🇸 EN</a>
-      <a href="#" class="lang-btn" data-lang="es" title="Español">🇪🇸 ES</a>
-    </div>
-  </div>
-</nav>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="portada.png" alt="OnChainRover Banner">
-</div>
-
-<div class="container">
-  <!-- CONTENT EN -->
-  <div id="content-en">
-    <h1>OnChainRover</h1>
-    <div class="subtitle">On-chain analysis · Crypto research · Market intelligence</div>
-
-    <div class="tldr">
-      <div class="tldr-title">📊 TL;DR</div>
-      <div class="tldr-text">
-        OnChainRover delivers deep blockchain data analysis for Bitcoin & Ethereum. 
-        Weekly newsletter with key metrics and crypto market trends.
-      </div>
-    </div>
-
-    <div class="links">
-      <a class="link-card" href="https://x.com/OnChainRover" target="_blank">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-        </svg>
-        <div>
-          <div class="link-title">Follow on X</div>
-          <div class="link-desc">Charts, market commentary and daily insights.</div>
-        </div>
-      </a>
-      <a class="link-card" href="https://onchainrover.substack.com/" target="_blank">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="#ff6719" viewBox="0 0 24 24">
-          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 2L12 13 5.4 6h13.2zM4 18V8l8 6 8-6v10H4z"/>
-        </svg>
-        <div>
-          <div class="link-title">Newsletter</div>
-          <div class="link-desc">Deep on-chain research and long-form analysis.</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="section-title" id="tools-en">Tools & Referrals</div>
-    <div class="tools">
-      <div class="tool">
-        <div class="tool-title">CryptoQuant – On-chain Dashboards</div>
-        <div class="tool-desc">
-          Sign up with my referral link and get access to on-chain and market analytics dashboards I use in my research.
-        </div>
-        <div class="tool-links">
-          <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Create free CryptoQuant account</a>
-          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· View my weekly BTC dashboard</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="disclaimer">
-      <div class="disclaimer-title">⚠️ Important Disclaimer</div>
-      <div class="disclaimer-text">
-        <strong>This website and all content is for informational and educational purposes only.</strong> It is <strong>NOT financial, investment, or trading advice</strong>.<br><br>
-        Cryptocurrencies are highly volatile and risky. You may lose all your capital. Always do your own research (DYOR) and consult qualified professionals.<br><br>
-        OnChainRover is not a registered financial advisor. Past performance does not guarantee future results.
-      </div>
-    </div>
-
-    <div class="about">
-      <p>Easy-to-read on-chain reports for Substack. Objective blockchain analysis: BTC, ETH, DeFi.</p>
-    </div>
-  </div>
-
-  <!-- CONTENT ES -->
-  <div id="content-es" class="hidden">
-    <h1>OnChainRover</h1>
-    <div class="subtitle">Análisis on-chain · Crypto research · Inteligencia de mercado</div>
-
-    <div class="tldr">
-      <div class="tldr-title">📊 TL;DR</div>
-      <div class="tldr-text">
-        OnChainRover: Análisis profundo de datos blockchain para Bitcoin y Ethereum. 
-        Newsletter semanal con métricas clave y tendencias crypto.
-      </div>
-    </div>
-
-    <div class="links">
-      <a class="link-card" href="https://x.com/OnChainRover" target="_blank">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-        </svg>
-        <div>
-          <div class="link-title">Síguenos en X</div>
-          <div class="link-desc">Gráficos, comentarios de mercado e insights diarios.</div>
-        </div>
-      </a>
-      <a class="link-card" href="https://onchainrover.substack.com/" target="_blank">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="#ff6719" viewBox="0 0 24 24">
-          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 2L12 13 5.4 6h13.2zM4 18V8l8 6 8-6v10H4z"/>
-        </svg>
-        <div>
-          <div class="link-title">Newsletter</div>
-          <div class="link-desc">Investigación on-chain profunda y análisis detallado.</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="section-title" id="tools-es">Herramientas & Referrals</div>
-    <div class="tools">
-      <div class="tool">
-        <div class="tool-title">CryptoQuant – Dashboards On-Chain</div>
-        <div class="tool-desc">
-          Regístrate con mi referral y accede a dashboards de análisis on-chain y mercado que uso en mi investigación.
-        </div>
-        <div class="tool-links">
-          <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Crear cuenta gratuita CryptoQuant</a>
-          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Ver mi dashboard BTC semanal</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="disclaimer">
-      <div class="disclaimer-title">⚠️ Descargo Importante</div>
-      <div class="disclaimer-text">
-        <strong>Esta web y contenido es solo informativo y educativo.</strong> <strong>NO es consejo financiero, inversión o trading</strong>.<br><br>
-        Criptomonedas son volátiles y arriesgadas. Puedes perder todo tu capital. Haz tu propia investigación (DYOR).<br><br>
-        OnChainRover no es asesor financiero registrado.
-      </div>
-    </div>
-
-    <div class="about">
-      <p>Informes on-chain fáciles de leer para Substack. Análisis objetivo: BTC, ETH, DeFi.</p>
-    </div>
-  </div>
-</div>
-
-<footer>
-  © 2026 OnChainRover · Crypto On-Chain Research
-</footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const langBtns = document.querySelectorAll('.lang-btn');
-  const contents = {
-    'en': document.getElementById('content-en'),
-    'es': document.getElementById('content-es')
-  };
-
-  function setLanguage(lang) {
-    // Update active button
-    langBtns.forEach(b => b.classList.remove('active'));
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-
-    // Show/hide content
-    Object.keys(contents).forEach(l => {
-      if (l === lang) {
-        contents[l].classList.remove('hidden');
-      } else {
-        contents[l].classList.add('hidden');
-      }
-    });
-
-    // Update html lang and title
-    document.documentElement.lang = lang;
-    document.title = lang === 'en' ? 'OnChainRover | Crypto On-Chain Research' : 'OnChainRover | Investigación On-Chain Crypto';
-
-    // Save preference
-    localStorage.setItem('onchainrover_lang', lang);
-  }
-
-  // AUTO-DETECT LANGUAGE
-  const savedLang = localStorage.getItem('onchainrover_lang');
-  let browserLang = navigator.language || navigator.userLanguage || 'en';
-  browserLang = browserLang.startsWith('es') ? 'es' : 'en'; // es-ES, es-MX -> es, else en
-
-  const initialLang = savedLang || browserLang;
-  setLanguage(initialLang);
-
-  // Toggle clicks
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      setLanguage(this.dataset.lang);
-    });
-  });
-});
-</script>
-</body>
-</html>
+/**************** DISCLAIMER ****************/
+.disclaimer { background:#f8f9fa; border:1px solid #e1e5e9; border-radius:12px; padding:20px
