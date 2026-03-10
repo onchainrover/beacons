@@ -2,234 +2,268 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>OnChainRover</title>
+<title>OnChainRover | Crypto On-Chain Research</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
-
 body{
-
-font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-background:#0b0d11;
-color:#e6e6e6;
-line-height:1.6;
-
+  font-family:'Inter',sans-serif;
+  background:#ffffff;
+  color:#111;
+  line-height:1.6;
 }
 
+/* NAVBAR */
+nav{
+  border-bottom:1px solid #eee;
+  background:white;
+}
+.nav-container{
+  max-width:1100px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-weight:600;
+  font-size:20px;
+}
+.nav-links a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#555;
+  font-size:15px;
+}
+.nav-links a:hover{
+  color:black;
+}
+
+/* HERO */
+.hero{
+  border-bottom:1px solid #eee;
+}
 .hero img{
-
-width:100%;
-max-height:420px;
-object-fit:cover;
-
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
 }
-
 .container{
-
-max-width:900px;
-margin:auto;
-padding:50px 20px;
-
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
 }
 
+/* TITLE */
 h1{
-
-font-size:42px;
-margin-bottom:10px;
-
+  font-size:42px;
+  margin-bottom:10px;
 }
-
 .subtitle{
-
-color:#9aa4af;
-margin-bottom:40px;
-font-size:18px;
-
+  font-size:18px;
+  color:#666;
+  margin-bottom:50px;
 }
 
+/* BUTTON LINKS */
 .links{
-
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-margin-bottom:60px;
-
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-bottom:70px;
 }
-
 .link-card{
-
-padding:26px;
-border-radius:14px;
-text-decoration:none;
-color:white;
-background:#151922;
-border:1px solid #242a35;
-transition:0.2s;
-
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:26px;
+  border-radius:14px;
+  border:1px solid #e8e8e8;
+  text-decoration:none;
+  color:black;
+  background:white;
+  transition:0.2s;
 }
-
 .link-card:hover{
-
-transform:translateY(-4px);
-border-color:#3b82f6;
-
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
-
+.icon{
+  width:32px;
+  height:32px;
+  flex-shrink:0;
+}
 .link-title{
-
-font-size:22px;
-margin-bottom:6px;
-
+  font-size:20px;
+  font-weight:600;
 }
-
 .link-desc{
-
-color:#9aa4af;
-font-size:15px;
-
+  font-size:14px;
+  color:#666;
 }
 
+/* SECTION TITLES */
 .section-title{
-
-font-size:24px;
-margin-bottom:20px;
-
+  font-size:24px;
+  margin-bottom:20px;
 }
 
+/* TOOLS / REFERRALS */
 .tools{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:18px;
-
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-bottom:60px;
 }
-
 .tool{
-
-background:#151922;
-border:1px solid #242a35;
-padding:18px;
-border-radius:10px;
-
+  background:white;
+  border:1px solid #e8e8e8;
+  padding:20px;
+  border-radius:10px;
+  transition:0.2s;
 }
-
+.tool:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
 .tool-title{
-
-font-size:16px;
-margin-bottom:6px;
-
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:6px;
 }
-
 .tool-desc{
-
-font-size:14px;
-color:#9aa4af;
-
+  font-size:14px;
+  color:#666;
 }
 
+/* ABOUT SECTION */
+.about{
+  margin-bottom:60px;
+}
+.about p{
+  font-size:15px;
+  color:#555;
+  line-height:1.7;
+}
+
+/* FOOTER */
 footer{
-
-margin-top:70px;
-padding-top:30px;
-border-top:1px solid #242a35;
-color:#7b8591;
-font-size:14px;
-
+  margin-top:70px;
+  padding-top:30px;
+  border-top:1px solid #eee;
+  color:#777;
+  font-size:14px;
+  text-align:center;
 }
 
+@media(max-width:640px){
+  .links{
+    grid-template-columns:1fr;
+  }
+}
 </style>
 
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">OnChainRover</div>
+    <div class="nav-links">
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
 <div class="hero">
-
-<img src="portada.png">
-
+  <img src="portada.png" alt="OnChainRover Banner">
 </div>
 
 <div class="container">
 
-<h1>OnChainRover</h1>
+  <h1>OnChainRover</h1>
+  <div class="subtitle">
+    On-chain analysis · Crypto research · Market intelligence
+  </div>
 
-<div class="subtitle">
-On-chain analysis, crypto research and market intelligence.
-</div>
+  <!-- LINKS BUTTONS -->
+  <div class="links">
+    <a class="link-card" href="https://x.com/OnChainRover" target="_blank">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="#1DA1F2" viewBox="0 0 24 24">
+        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+      </svg>
+      <div>
+        <div class="link-title">Follow on X</div>
+        <div class="link-desc">Charts, market commentary and short insights.</div>
+      </div>
+    </a>
 
-<div class="links">
+    <a class="link-card" href="https://onchainrover.substack.com/" target="_blank">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="#ff6719" viewBox="0 0 24 24">
+        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 2L12 13 5.4 6h13.2zM4 18V8l8 6 8-6v10H4z"/>
+      </svg>
+      <div>
+        <div class="link-title">Read the Newsletter</div>
+        <div class="link-desc">Deep on-chain research and long-form analysis.</div>
+      </div>
+    </a>
+  </div>
 
-<a class="link-card" href="https://x.com/OnChainRover" target="_blank">
+  <!-- TOOLS / REFERRALS -->
+  <div id="tools" class="section-title">Tools & Referrals</div>
+  <div class="tools">
 
-<div class="link-title">
-Follow on X
-</div>
+    <div class="tool">
+      <div class="tool-title">Trading Platforms</div>
+      <div class="tool-desc">Recommended exchanges with referral links and tutorials.</div>
+    </div>
 
-<div class="link-desc">
-Short insights, charts and real time market observations.
-</div>
+    <div class="tool">
+      <div class="tool-title">On-chain Analytics</div>
+      <div class="tool-desc">Dashboards and blockchain analytics platforms for research.</div>
+    </div>
 
-</a>
+    <div class="tool">
+      <div class="tool-title">Data Sources</div>
+      <div class="tool-desc">Reliable market data providers for informed decisions.</div>
+    </div>
 
-<a class="link-card" href="https://onchainrover.substack.com/" target="_blank">
+    <div class="tool">
+      <div class="tool-title">Educational Resources</div>
+      <div class="tool-desc">Courses and guides for on-chain analysis.</div>
+    </div>
 
-<div class="link-title">
-Read the Newsletter
-</div>
+  </div>
 
-<div class="link-desc">
-Long-form research, on-chain reports and deep analysis.
-</div>
+  <!-- ABOUT -->
+  <div id="about" class="section-title">About OnChainRover</div>
+  <div class="about">
+    <p>
+      OnChainRover provides independent on-chain crypto analysis, combining charts, dashboards, and market insights to help
+      traders, investors, and enthusiasts understand blockchain activity and token flows. Our goal is to make complex
+      data actionable in an easy-to-digest format.
+    </p>
+  </div>
 
-</a>
-
-</div>
-
-<!--
-<div class="section-title">
-Tools & Platforms
-</div>
-
-<div class="tools">
-
-<div class="tool">
-<div class="tool-title">Trading Platforms</div>
-<div class="tool-desc">Recommended exchanges and trading tools.</div>
-</div>
-
-<div class="tool">
-<div class="tool-title">On-chain Analytics</div>
-<div class="tool-desc">Dashboards and blockchain analytics platforms.</div>
-</div>
-
-<div class="tool">
-<div class="tool-title">Research Sources</div>
-<div class="tool-desc">Data platforms and market intelligence.</div>
-</div>
-
-<div class="tool">
-<div class="tool-title">Educational Resources</div>
-<div class="tool-desc">Courses and material to understand on-chain analysis.</div>
-</div>
--->
 </div>
 
 <footer>
-
-OnChainRover · Crypto on-chain research
-
+  © 2026 OnChainRover · Crypto On-chain Research
 </footer>
-
-</div>
 
 </body>
 </html>
