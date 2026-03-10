@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,25 +23,21 @@ nav { border-bottom:1px solid #e3e6eb; background:#ffffffcc; backdrop-filter:blu
 /* HERO */
 .hero { border-bottom:1px solid #e3e6eb; background:#f8fafc; }
 .hero img { width:100%; max-height:360px; object-fit:cover; display:block; }
-.container { max-width:1000px; margin:auto; padding:50px 20px 70px; }
+.container { max-width:1000px; margin:auto; padding:40px 20px 70px; }
 
 /* TITLE */
 h1 { font-size:42px; margin-bottom:10px; }
 .subtitle { font-size:18px; color:#666; margin-bottom:40px; }
-
-/* TLDR */
-.tldr { background:#f0f4ff; border:1px solid #d6e2ff; border-radius:14px; padding:22px 24px; margin-bottom:40px; }
-.tldr-title { font-size:18px; font-weight:600; margin-bottom:10px; color:#2257c4; }
-.tldr-text { font-size:15px; color:#2952a3; }
 
 /* LINK CARDS */
 .links { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:60px; }
 .link-card { display:flex; align-items:center; gap:16px; padding:22px 24px; border-radius:14px; border:1px solid #e3e6eb; text-decoration:none; color:#111; background:white; transition:0.2s; box-shadow:0 4px 10px rgba(15,23,42,0.03); }
 .link-card:hover { transform:translateY(-3px); box-shadow:0 10px 24px rgba(15,23,42,0.08); }
 
-.icon { width:34px; height:34px; flex-shrink:0; border-radius:8px; display:flex; align-items:center; justify-content:center; }
-.icon-x { background:#1d9bf0; color:#000; }
-.icon-substack { background:#ff6719; color:#fff; }
+.icon { width:34px; height:34px; flex-shrink:0; border-radius:8px; display:flex; align-items:center; justify-content:center; background:#f8f9fa; }
+.icon-x svg { fill:#000; width:20px; height:20px; }
+.icon-substack { background:#f8f9fa; }
+.icon-substack svg { fill:#ff6719; width:20px; height:20px; }
 
 .link-title { font-size:18px; font-weight:600; }
 .link-desc { font-size:14px; color:#666; }
@@ -71,8 +68,8 @@ h1 { font-size:42px; margin-bottom:10px; }
 /* FOOTER */
 footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; color:#777; font-size:13px; text-align:center; background:#fff; }
 
-@media(max-width:640px){
-  .links { grid-template-columns:1fr; }
+@media(max-width:640px){ 
+  .links { grid-template-columns:1fr; } 
   .hero img{ max-height:260px; }
 }
 .hidden { display: none !important; }
@@ -103,8 +100,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
     <div class="links">
       <a class="link-card" href="https://x.com/OnChainRover" target="_blank">
         <div class="icon icon-x">
-          <!-- logo X -->
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <svg viewBox="0 0 24 24">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
         </div>
@@ -116,7 +112,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
 
       <a class="link-card" href="https://onchainrover.substack.com/" target="_blank">
         <div class="icon icon-substack">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff">
+          <svg viewBox="0 0 24 24">
             <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 2L12 13 5.4 6h13.2zM4 18V8l8 6 8-6v10H4z"/>
           </svg>
         </div>
@@ -136,7 +132,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
         </div>
         <div class="tool-links">
           <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Create free CryptoQuant account</a>
-          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· View my weekly BTC dashboard</a>
+          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· BTC Dashboard in CryptoQuant</a>
         </div>
       </div>
     </div>
@@ -150,7 +146,9 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
       </div>
     </div>
 
-  
+    <div class="about">
+      <p>Easy-to-read on-chain reports for Substack. Objective blockchain analysis: BTC, ETH, DeFi.</p>
+    </div>
   </div>
 
   <!-- CONTENT ES -->
@@ -161,7 +159,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
     <div class="links">
       <a class="link-card" href="https://x.com/OnChainRover" target="_blank">
         <div class="icon icon-x">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <svg viewBox="0 0 24 24">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
         </div>
@@ -170,9 +168,10 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
           <div class="link-desc">Gráficos, comentarios de mercado e insights diarios.</div>
         </div>
       </a>
+
       <a class="link-card" href="https://onchainrover.substack.com/" target="_blank">
         <div class="icon icon-substack">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff">
+          <svg viewBox="0 0 24 24">
             <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 2L12 13 5.4 6h13.2zM4 18V8l8 6 8-6v10H4z"/>
           </svg>
         </div>
@@ -192,7 +191,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
         </div>
         <div class="tool-links">
           <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Crear cuenta gratuita CryptoQuant</a>
-          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Ver mi dashboard BTC semanal</a>
+          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· BTC Dashboard en CryptoQuant</a>
         </div>
       </div>
     </div>
@@ -206,7 +205,9 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
       </div>
     </div>
 
-    
+    <div class="about">
+      <p>Informes on-chain fáciles de leer para Substack. Análisis objetivo: BTC, ETH, DeFi.</p>
+    </div>
   </div>
 </div>
 
@@ -229,9 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
       contents[l].classList.toggle('hidden', l !== lang);
     });
     document.documentElement.lang = lang;
-    document.title = lang === 'en'
-      ? 'OnChainRover | Crypto On-Chain Research'
-      : 'OnChainRover | Investigación On-Chain Crypto';
+    document.title = lang === 'en' ? 'OnChainRover | Crypto On-Chain Research' : 'OnChainRover | Investigación On-Chain Crypto';
     localStorage.setItem('onchainrover_lang', lang);
   }
 
