@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +14,7 @@ body { font-family:'Inter',sans-serif; background:#f5f6f8; color:#111; line-heig
 /* NAVBAR */
 nav { border-bottom:1px solid #e3e6eb; background:#ffffffcc; backdrop-filter:blur(10px); position: sticky; top:0; z-index:10; }
 .nav-container { max-width:1100px; margin:auto; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; }
-.logo { display:flex; align-items:center; gap:12px; font-weight:600; font-size:20px; color:#111; }
-.logo-img { width:36px; height:36px; border-radius:50%; object-fit:cover; }
+.logo { height:40px; width:auto; object-fit:contain; display:block; }
 .lang-toggle { display:flex; gap:8px; background:#f1f2f5; padding:8px 12px; border-radius:20px; border:1px solid #e0e3ea; }
 .lang-btn { padding:6px 12px; border-radius:16px; text-decoration:none; font-size:14px; font-weight:500; transition:0.2s; cursor:pointer; }
 .lang-btn.active { background:#1a73e8; color:white; }
@@ -74,6 +72,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
 @media(max-width:640px){ 
   .links { grid-template-columns:1fr; } 
   .hero img{ max-height:260px; }
+  .logo { height:32px; }
 }
 .hidden { display: none !important; }
 </style>
@@ -81,10 +80,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
 <body>
 <nav>
   <div class="nav-container">
-    <div class="logo">
-      <img src="logo.png" alt="OnChainRover" class="logo-img">
-      <span>OnChainRover</span>
-    </div>
+    <img src="logo.png" alt="OnChainRover" class="logo">
     <div class="lang-toggle">
       <a href="#" class="lang-btn active" data-lang="en" title="English">🇺🇸 EN</a>
       <a href="#" class="lang-btn" data-lang="es" title="Español">🇪🇸 ES</a>
@@ -207,8 +203,6 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
         OnChainRover no es asesor financiero registrado.
       </div>
     </div>
-
-
   </div>
 </div>
 
@@ -226,12 +220,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function setLanguage(lang) {
     langBtns.forEach(b => b.classList.remove('active'));
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+    document.querySelector(\`[data-lang="\${lang}"]\`).classList.add('active');
     Object.keys(contents).forEach(l => {
       contents[l].classList.toggle('hidden', l !== lang);
     });
     document.documentElement.lang = lang;
-    document.title = lang === 'en' ? 'OnChainRover | Crypto On-Chain Research' : 'OnChainRover | Investigación On-Chain Crypto';
+    document.title = lang === 'en'
+      ? 'OnChainRover | Crypto On-Chain Research'
+      : 'OnChainRover | Investigación On-Chain Crypto';
     localStorage.setItem('onchainrover_lang', lang);
   }
 
