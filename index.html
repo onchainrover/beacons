@@ -56,4 +56,204 @@ h1 { font-size:42px; margin-bottom:10px; }
 .tool-links a:hover { text-decoration:underline; }
 
 /**************** DISCLAIMER ****************/
-.disclaimer { background:#f8f9fa; border:1px solid #e1e5e9; border-radius:12px; padding:20px
+.disclaimer { background:#f8f9fa; border:1px solid #e1e5e9; border-radius:12px; padding:20px 22px; margin-bottom:40px; font-size:13px; line-height:1.5; }
+.disclaimer-title { font-weight:600; color:#d32f2f; margin-bottom:10px; font-size:14px; }
+.disclaimer-text { color:#555; }
+.disclaimer-text strong { color:#111; }
+
+/**************** ABOUT ****************/
+.about { margin-bottom:40px; }
+.about p { font-size:15px; color:#555; line-height:1.7; }
+
+/**************** FOOTER ****************/
+footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; color:#777; font-size:13px; text-align:center; background:#fff; }
+
+@media(max-width:640px){
+  .links { grid-template-columns:1fr; }
+  .hero img{ max-height:260px; }
+}
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="logo.jpg" alt="OnChainRover Logo">
+      <span>OnChainRover</span>
+    </div>
+    <div class="lang-toggle">
+      <a href="#" class="lang-btn active" data-lang="en" title="English">🇺🇸 EN</a>
+      <a href="#" class="lang-btn" data-lang="es" title="Español">🇪🇸 ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="portada.jpg" alt="OnChainRover Banner">
+</div>
+
+<div class="container">
+  <!-- CONTENT EN -->
+  <div id="content-en">
+    <h1>OnChainRover</h1>
+    <div class="subtitle">On-chain analysis · Crypto research · Market intelligence</div>
+
+    <div class="tldr">
+      <div class="tldr-title">📊 TL;DR</div>
+      <div class="tldr-text">
+        OnChainRover delivers deep blockchain data analysis for Bitcoin & Ethereum.
+        Weekly newsletter with key metrics and crypto market trends.
+      </div>
+    </div>
+
+    <div class="links">
+      <a class="link-card" href="https://x.com/OnChainRover" target="_blank">
+        <img class="icon" src="logo.jpg" alt="OnChainRover X icon">
+        <div>
+          <div class="link-title">Follow on X</div>
+          <div class="link-desc">Charts, market commentary and daily insights.</div>
+        </div>
+      </a>
+      <a class="link-card" href="https://onchainrover.substack.com/" target="_blank">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="#ff6719" viewBox="0 0 24 24">
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 2L12 13 5.4 6h13.2zM4 18V8l8 6 8-6v10H4z"/>
+        </svg>
+        <div>
+          <div class="link-title">Newsletter</div>
+          <div class="link-desc">Deep on-chain research and long-form analysis.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="section-title" id="tools-en">Tools & Referrals</div>
+    <div class="tools">
+      <div class="tool">
+        <div class="tool-title">CryptoQuant – On-chain Dashboards</div>
+        <div class="tool-desc">
+          Sign up with my referral link and get access to on-chain and market analytics dashboards I use in my research.
+        </div>
+        <div class="tool-links">
+          <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Create free CryptoQuant account</a>
+          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· View my weekly BTC dashboard</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <div class="disclaimer-title">⚠️ Important Disclaimer</div>
+      <div class="disclaimer-text">
+        <strong>This website and all content is for informational and educational purposes only.</strong> It is <strong>NOT financial, investment, or trading advice</strong>.<br><br>
+        Cryptocurrencies are highly volatile and risky. You may lose all your capital. Always do your own research (DYOR) and consult qualified professionals.<br><br>
+        OnChainRover is not a registered financial advisor. Past performance does not guarantee future results.
+      </div>
+    </div>
+
+    <div class="about">
+      <p>Easy-to-read on-chain reports for Substack. Objective blockchain analysis: BTC, ETH, DeFi.</p>
+    </div>
+  </div>
+
+  <!-- CONTENT ES -->
+  <div id="content-es" class="hidden">
+    <h1>OnChainRover</h1>
+    <div class="subtitle">Análisis on-chain · Crypto research · Inteligencia de mercado</div>
+
+    <div class="tldr">
+      <div class="tldr-title">📊 TL;DR</div>
+      <div class="tldr-text">
+        OnChainRover: Análisis profundo de datos blockchain para Bitcoin y Ethereum.
+        Newsletter semanal con métricas clave y tendencias crypto.
+      </div>
+    </div>
+
+    <div class="links">
+      <a class="link-card" href="https://x.com/OnChainRover" target="_blank">
+        <img class="icon" src="logo.jpg" alt="OnChainRover X icon">
+        <div>
+          <div class="link-title">Síguenos en X</div>
+          <div class="link-desc">Gráficos, comentarios de mercado e insights diarios.</div>
+        </div>
+      </a>
+      <a class="link-card" href="https://onchainrover.substack.com/" target="_blank">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="#ff6719" viewBox="0 0 24 24">
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-1.4 2L12 13 5.4 6h13.2zM4 18V8l8 6 8-6v10H4z"/>
+        </svg>
+        <div>
+          <div class="link-title">Newsletter</div>
+          <div class="link-desc">Investigación on-chain profunda y análisis detallado.</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="section-title" id="tools-es">Herramientas & Referrals</div>
+    <div class="tools">
+      <div class="tool">
+        <div class="tool-title">CryptoQuant – Dashboards On-Chain</div>
+        <div class="tool-desc">
+          Regístrate con mi referral y accede a dashboards de análisis on-chain y mercado que uso en mi investigación.
+        </div>
+        <div class="tool-links">
+          <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Crear cuenta gratuita CryptoQuant</a>
+          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Ver mi dashboard BTC semanal</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <div class="disclaimer-title">⚠️ Descargo Importante</div>
+      <div class="disclaimer-text">
+        <strong>Esta web y contenido es solo informativo y educativo.</strong> <strong>NO es consejo financiero, inversión o trading</strong>.<br><br>
+        Criptomonedas son volátiles y arriesgadas. Puedes perder todo tu capital. Haz tu propia investigación (DYOR).<br><br>
+        OnChainRover no es asesor financiero registrado.
+      </div>
+    </div>
+
+    <div class="about">
+      <p>Informes on-chain fáciles de leer para Substack. Análisis objetivo: BTC, ETH, DeFi.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 OnChainRover · Crypto On-Chain Research
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const langBtns = document.querySelectorAll('.lang-btn');
+  const contents = {
+    'en': document.getElementById('content-en'),
+    'es': document.getElementById('content-es')
+  };
+
+  function setLanguage(lang) {
+    langBtns.forEach(b => b.classList.remove('active'));
+    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+    Object.keys(contents).forEach(l => {
+      contents[l].classList.toggle('hidden', l !== lang);
+    });
+    document.documentElement.lang = lang;
+    document.title = lang === 'en'
+      ? 'OnChainRover | Crypto On-Chain Research'
+      : 'OnChainRover | Investigación On-Chain Crypto';
+    localStorage.setItem('onchainrover_lang', lang);
+  }
+
+  const savedLang = localStorage.getItem('onchainrover_lang');
+  let browserLang = navigator.language || navigator.userLanguage || 'en';
+  browserLang = browserLang.startsWith('es') ? 'es' : 'en';
+  const initialLang = savedLang || browserLang;
+  setLanguage(initialLang);
+
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      setLanguage(this.dataset.lang);
+    });
+  });
+});
+</script>
+</body>
+</html>
