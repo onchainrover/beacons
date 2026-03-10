@@ -216,27 +216,41 @@ document.addEventListener('DOMContentLoaded', function() {
     'es': document.getElementById('content-es')
   };
 
+  function setLanguage(lang) {
+    // Update active button
+    langBtns.forEach(b => b.classList.remove('active'));
+    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+    // Show/hide content
+    Object.keys(contents).forEach(l => {
+      if (l === lang) {
+        contents[l].classList.remove('hidden');
+      } else {
+        contents[l].classList.add('hidden');
+      }
+    });
+
+    // Update html lang and title
+    document.documentElement.lang = lang;
+    document.title = lang === 'en' ? 'OnChainRover | Crypto On-Chain Research' : 'OnChainRover | Investigación On-Chain Crypto';
+
+    // Save preference
+    localStorage.setItem('onchainrover_lang', lang);
+  }
+
+  // AUTO-DETECT LANGUAGE
+  const savedLang = localStorage.getItem('onchainrover_lang');
+  let browserLang = navigator.language || navigator.userLanguage || 'en';
+  browserLang = browserLang.startsWith('es') ? 'es' : 'en'; // es-ES, es-MX -> es, else en
+
+  const initialLang = savedLang || browserLang;
+  setLanguage(initialLang);
+
+  // Toggle clicks
   langBtns.forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
-      const lang = this.dataset.lang;
-
-      // Update active button
-      langBtns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-
-      // Show/hide content
-      Object.keys(contents).forEach(l => {
-        if (l === lang) {
-          contents[l].classList.remove('hidden');
-        } else {
-          contents[l].classList.add('hidden');
-        }
-      });
-
-      // Update html lang
-      document.documentElement.lang = lang;
-      document.title = lang === 'en' ? 'OnChainRover | Crypto On-Chain Research' : 'OnChainRover | Investigación On-Chain Crypto';
+      setLanguage(this.dataset.lang);
     });
   });
 });
