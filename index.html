@@ -219,24 +219,39 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   function setLanguage(lang) {
-    langBtns.forEach(b => b.classList.remove('active'));
-    document.querySelector(\`[data-lang="\${lang}"]\`).classList.add('active');
+    // Actualiza la clase active de los botones
+    langBtns.forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.querySelector('[data-lang="' + lang + '"]');
+    if (activeBtn) activeBtn.classList.add('active');
+
+    // Muestra/oculta contenido según idioma
     Object.keys(contents).forEach(l => {
-      contents[l].classList.toggle('hidden', l !== lang);
+      if (l === lang) {
+        contents[l].classList.remove('hidden');
+      } else {
+        contents[l].classList.add('hidden');
+      }
     });
+
+    // Cambia el atributo lang del HTML y el título
     document.documentElement.lang = lang;
     document.title = lang === 'en'
       ? 'OnChainRover | Crypto On-Chain Research'
       : 'OnChainRover | Investigación On-Chain Crypto';
+
+    // Guarda la preferencia en localStorage
     localStorage.setItem('onchainrover_lang', lang);
   }
 
+  // Detecta idioma guardado o del navegador
   const savedLang = localStorage.getItem('onchainrover_lang');
   let browserLang = navigator.language || navigator.userLanguage || 'en';
   browserLang = browserLang.startsWith('es') ? 'es' : 'en';
   const initialLang = savedLang || browserLang;
+
   setLanguage(initialLang);
 
+  // Eventos de los botones
   langBtns.forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
