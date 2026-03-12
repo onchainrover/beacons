@@ -54,9 +54,18 @@ h1 { font-size:42px; margin-bottom:10px; }
 .tool:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(15,23,42,0.06); }
 .tool-title { font-size:15px; font-weight:600; margin-bottom:6px; }
 .tool-desc { font-size:14px; color:#666; margin-bottom:10px; }
-.tool-links { display:flex; flex-direction:column; gap:6px; font-size:13px; }
-.tool-links a { text-decoration:none; color:#1a73e8; font-weight:500; }
-.tool-links a:hover { text-decoration:underline; }
+.tool-links { display:flex; flex-direction:column; gap:8px; margin-top:14px; }
+.tool-links a { display:block; padding:8px 14px; border-radius:8px; border:1.5px solid #1a73e8; color:#1a73e8; font-size:13px; font-weight:600; text-decoration:none; text-align:center; transition:background 0.18s, color 0.18s; }
+.tool-links a:hover { background:#1a73e8; color:#fff; }
+
+/* REFERRAL REWARD BADGE */
+.tool-reward { display:inline-block; margin-bottom:10px; padding:4px 10px; border-radius:20px; font-size:12px; font-weight:600; background:#e8f5e9; color:#2e7d32; border:1px solid #c8e6c9; }
+
+/* REFERRAL TIERS TABLE */
+.tier-table { width:100%; border-collapse:collapse; font-size:12px; margin-top:10px; margin-bottom:10px; }
+.tier-table th { background:#f1f2f5; font-weight:600; color:#444; padding:5px 8px; text-align:left; border:1px solid #e3e6eb; }
+.tier-table td { padding:5px 8px; border:1px solid #e3e6eb; color:#555; }
+.tier-table tr:hover td { background:#f8fafc; }
 
 /* DISCLAIMER */
 .disclaimer { background:#f8f9fa; border:1px solid #e1e5e9; border-radius:12px; padding:20px 22px; margin-bottom:40px; font-size:13px; line-height:1.5; }
@@ -141,16 +150,53 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
 
     <div class="section-title" id="tools-en">Tools & Referrals</div>
     <div class="tools">
+
+      <!-- CryptoQuant -->
       <div class="tool">
         <div class="tool-title">CryptoQuant – On-chain Dashboards</div>
+        <div class="tool-reward">🎁 $15 in credits when you subscribe</div>
         <div class="tool-desc">
-          Sign up with my referral link and get access to on-chain and market analytics dashboards I use in my research.
+          On-chain and market analytics dashboards I use in my research. Sign up free and get $15 in platform credits when you subscribe to a paid plan.
         </div>
         <div class="tool-links">
-          <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Create free CryptoQuant account</a>
-          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· BTC Dashboard in CryptoQuant</a>
+          <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">Get started on CryptoQuant</a>
+          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">BTC Dashboard</a>
         </div>
       </div>
+
+      <!-- Nexo -->
+      <div class="tool">
+        <div class="tool-title">Nexo – Earn & Borrow Crypto</div>
+        <div class="tool-reward">🎁 Earn up to $2,500 in BTC when you sign up</div>
+        <div class="tool-desc">
+          Earn interest on your crypto and stablecoins. Sign up with my link and receive BTC rewards based on your deposited balance (0.5% of your average portfolio balance).
+        </div>
+        <div class="tool-links">
+          <a href="https://nexo.com/ref/al3eg734n5?src=web-link" target="_blank">Get started on Nexo</a>
+        </div>
+      </div>
+
+      <!-- CoinDepo -->
+      <div class="tool">
+        <div class="tool-title">CoinDepo – High-Yield Crypto Accounts</div>
+        <div class="tool-reward">🎁 Earn up to $500 USDC when you sign up</div>
+        <div class="tool-desc">
+          Regulated platform with industry-leading rates for crypto &amp; stablecoins, 0% fees and fully insured assets. Deposit for 90 days and earn USDC:
+        </div>
+        <table class="tier-table">
+          <tr><th>Balance (90 days)</th><th>Your reward</th></tr>
+          <tr><td>$100 – $249</td><td>$10 USDC</td></tr>
+          <tr><td>$250 – $499</td><td>$25 USDC</td></tr>
+          <tr><td>$500 – $999</td><td>$50 USDC</td></tr>
+          <tr><td>$1,000 – $4,999</td><td>$100 USDC</td></tr>
+          <tr><td>$5,000 – $14,999</td><td>$300 USDC</td></tr>
+          <tr><td>$15,000+</td><td>$500 USDC</td></tr>
+        </table>
+        <div class="tool-links">
+          <a href="https://app.coindepo.com/auth/sign-up?ref=R-MnkSsk8s" target="_blank">Get started on CoinDepo</a>
+        </div>
+      </div>
+
     </div>
 
     <div class="disclaimer">
@@ -158,7 +204,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
       <div class="disclaimer-text">
         <strong>This website and all content is for informational and educational purposes only.</strong> It is <strong>NOT financial, investment, or trading advice</strong>.<br><br>
         Cryptocurrencies are highly volatile and risky. You may lose all your capital. Always do your own research (DYOR) and consult qualified professionals.<br><br>
-        OnChainRover is not a registered financial advisor. Past performance does not guarantee future results.
+        OnChainRover is not a registered financial advisor. Past performance does not guarantee future results. Some links on this page are referral links — I may earn a reward if you sign up through them, at no extra cost to you.
       </div>
     </div>
 
@@ -209,16 +255,53 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
 
     <div class="section-title" id="tools-es">Herramientas & Referrals</div>
     <div class="tools">
+
+      <!-- CryptoQuant ES -->
       <div class="tool">
         <div class="tool-title">CryptoQuant – Dashboards On-Chain</div>
+        <div class="tool-reward">🎁 $15 en créditos al suscribirte</div>
         <div class="tool-desc">
-          Regístrate con mi referral y accede a dashboards de análisis on-chain y mercado que uso en mi investigación.
+          Dashboards de análisis on-chain y mercado que uso en mi investigación. Regístrate gratis y obtén $15 en créditos de plataforma al contratar un plan de pago.
         </div>
         <div class="tool-links">
-          <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· Crear cuenta gratuita CryptoQuant</a>
-          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">· BTC Dashboard en CryptoQuant</a>
+          <a href="https://cryptoquant.com/sign-up?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">Empieza en CryptoQuant</a>
+          <a href="https://cryptoquant.com/community/dashboard/69b00c5c8792916e61ec67d5?my-friend=bFw0DfAmcpTFdgDH5bBIChcXjl6" target="_blank">Dashboard BTC</a>
         </div>
       </div>
+
+      <!-- Nexo ES -->
+      <div class="tool">
+        <div class="tool-title">Nexo – Gana interés y pide prestado crypto</div>
+        <div class="tool-reward">🎁 Gana hasta $2,500 en BTC al registrarte</div>
+        <div class="tool-desc">
+          Gana interés sobre tus criptomonedas y stablecoins. Regístrate con mi enlace y recibe recompensas en BTC según tu saldo depositado (0,5% de tu saldo medio).
+        </div>
+        <div class="tool-links">
+          <a href="https://nexo.com/ref/al3eg734n5?src=web-link" target="_blank">Empieza en Nexo</a>
+        </div>
+      </div>
+
+      <!-- CoinDepo ES -->
+      <div class="tool">
+        <div class="tool-title">CoinDepo – Cuentas de alto rendimiento crypto</div>
+        <div class="tool-reward">🎁 Gana hasta $500 USDC al registrarte</div>
+        <div class="tool-desc">
+          Plataforma regulada con tasas líderes del sector, 0% de comisiones y activos totalmente asegurados. Deposita 90 días y gana USDC:
+        </div>
+        <table class="tier-table">
+          <tr><th>Saldo (90 días)</th><th>Tu recompensa</th></tr>
+          <tr><td>$100 – $249</td><td>$10 USDC</td></tr>
+          <tr><td>$250 – $499</td><td>$25 USDC</td></tr>
+          <tr><td>$500 – $999</td><td>$50 USDC</td></tr>
+          <tr><td>$1,000 – $4,999</td><td>$100 USDC</td></tr>
+          <tr><td>$5,000 – $14,999</td><td>$300 USDC</td></tr>
+          <tr><td>$15,000+</td><td>$500 USDC</td></tr>
+        </table>
+        <div class="tool-links">
+          <a href="https://app.coindepo.com/auth/sign-up?ref=R-MnkSsk8s" target="_blank">Empieza en CoinDepo</a>
+        </div>
+      </div>
+
     </div>
 
     <div class="disclaimer">
@@ -226,7 +309,7 @@ footer { margin-top:40px; padding:22px 0 28px; border-top:1px solid #e3e6eb; col
       <div class="disclaimer-text">
         <strong>Esta web y contenido es solo informativo y educativo.</strong> <strong>NO es consejo financiero, inversión o trading</strong>.<br><br>
         Criptomonedas son volátiles y arriesgadas. Puedes perder todo tu capital. Haz tu propia investigación (DYOR).<br><br>
-        OnChainRover no es asesor financiero registrado.
+        OnChainRover no es asesor financiero registrado. Algunos enlaces de esta página son enlaces de referido — puedo recibir una recompensa si te registras a través de ellos, sin coste adicional para ti.
       </div>
     </div>
   </div>
@@ -245,12 +328,10 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   function setLanguage(lang) {
-    // Actualiza la clase active de los botones
     langBtns.forEach(btn => btn.classList.remove('active'));
     const activeBtn = document.querySelector('[data-lang="' + lang + '"]');
     if (activeBtn) activeBtn.classList.add('active');
 
-    // Muestra/oculta contenido según idioma
     Object.keys(contents).forEach(l => {
       if (l === lang) {
         contents[l].classList.remove('hidden');
@@ -259,17 +340,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // Cambia el atributo lang del HTML y el título
     document.documentElement.lang = lang;
     document.title = lang === 'en'
       ? 'OnChainRover | Crypto On-Chain Research'
       : 'OnChainRover | Investigación On-Chain Crypto';
 
-    // Guarda la preferencia en localStorage
     localStorage.setItem('onchainrover_lang', lang);
   }
 
-  // Detecta idioma guardado o del navegador
   const savedLang = localStorage.getItem('onchainrover_lang');
   let browserLang = navigator.language || navigator.userLanguage || 'en';
   browserLang = browserLang.startsWith('es') ? 'es' : 'en';
@@ -277,7 +355,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setLanguage(initialLang);
 
-  // Eventos de los botones
   langBtns.forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
